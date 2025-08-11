@@ -1,0 +1,15 @@
+@charset "UTF-8"
+
+/*
+    Paleta de cores
+    azul: #C5D4F4
+    gradiente: #F8E1F6
+    rosa:#FDDDF5
+*/
+
+:root{
+    --azul-claro: #C5D4F4;
+    --cor-gradiente: #F8E1F6;
+    --rosa: #FDDDF5;
+
+}
