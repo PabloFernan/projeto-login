@@ -1,57 +1,59 @@
 @charset "UTF-8";
 
 /*
-    Paleta de cores
-    azul: #C5D4F4
-    gradiente: #F8E1F6
-    rosa:#FDDDF5
+    Paleta de cores:
+    fundo claro: #EAF2FB
+    gradiente suave: #F3E6F8
+    rosa claro: #FAD4E5
+    azul título: #1E3A5F
+    azul botão: #3D7AF7
+    azul botão hover: #2C5DD9
 */
 
-:root{
-    --azul-claro: #C5D4F4;
-    --cor-gradiente: #F8E1F6;
-    --rosa: #FDDDF5;
-
+:root {
+    --fundo-claro: #EAF2FB;
+    --cor-gradiente: #F3E6F8;
+    --rosa-claro: #FAD4E5;
+    --azul-titulo: #1E3A5F;
+    --azul-botao: #3D7AF7;
+    --azul-botao-hover: #2C5DD9;
 }
 
-*{
+* {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    padding: 0px;
-    margin: 0px;
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-body, html{
-    background-color: #adc4f4;
+body, html {
+    background-color: var(--fundo-claro);
     height: 100vh;
     width: 100vw;
 }
 
-main{
+main {
     position: relative;
     height: 100vh;
     width: 100vw;
 }
 
-section#login{
+section#login {
     position: absolute;
     top: 50%;
-    left:50%;
+    left: 50%;
     transform: translate(-50%, -50%);
     overflow: hidden;
-
-
-    background-color: white;
-    width: 250px;
-    height: 500px;
+    background-color: #FFFFFF;
+    width: 270px;
+    height: 515px;
     border-radius: 20px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.436);
-
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.12);
     transition: width .3s, height .3s;
     transition-timing-function: ease;
 }
 
-section#login > div#imagem{
+section#login > div#imagem {
     display: block;
     background: url('../imagens/pexels-gustavo-crivellari-3608635-5396940.jpg');
     background-size: cover;
@@ -59,7 +61,71 @@ section#login > div#imagem{
     background-position: center left;
 }
 
-section#login > div#formulario{
+section#login > div#formulario {
     display: block;
     padding: 10px;
+}
+
+div#formulario > h1 {
+    text-align: center;
+    margin-bottom: 10px;
+    color: var(--azul-titulo);
+}
+
+div#formulario > p {
+    font-size: 0.8em;
+    color: var(--azul-titulo);
+}
+
+form > div.campo {
+    background-color: #DCE8FA;
+    width: 100%;
+    display: block;
+    height: 40px;
+    border-radius: 5px;
+    margin: 5px 0;
+}
+
+form label {
+    display: none;
+}
+
+form > input[type=submit] {
+    display: block;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    background-color: var(--azul-botao);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form > input[type=submit]:hover {
+    background-color: var(--azul-botao-hover);
+}
+
+form > a.botao {
+    display: block;
+    text-align: center;
+    font-size: 1em;
+    width: 100%;
+    height: 40px;
+    padding-top: 5px;
+    margin-top: 5px;
+    background-color: white;
+    border: 1px solid var(--azul-botao);
+    border-radius: 7px;
+    color: var(--azul-botao);
+    text-decoration: none;
+}
+
+form > a.botao:hover {
+    background-color: var(--azul-botao-hover);
+    color: white;
+}
+
+form > a > span.material-icons {
+    font-size: 0.8em;
 }
